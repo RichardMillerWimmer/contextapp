@@ -11,9 +11,9 @@ function App() {
       <ThemeContextProvider>
         <AuthContextProvider>
           <Navbar />
-          <BookList />
-          <ThemeToggle />
         </AuthContextProvider>
+        <BookList />
+        <ThemeToggle />
       </ThemeContextProvider>
     </div>
   );
