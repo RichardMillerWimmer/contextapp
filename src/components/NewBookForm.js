@@ -5,18 +5,19 @@ export const NewBookForm = ({addBook}) => {
 
     console.log(book)
     
-    const handleSubmit = (e) => {
-        console('handle hit')
-        e.preventDeafult()
+    const handleSubmit = () => {
         addBook(book)
         setBook('')
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => {
+            e.preventDefault()
+            handleSubmit()
+            }}>
             <label>Book Name:</label>
             <input type='text' value={book} required onChange={(e) => {setBook(e.target.value)}}/>
-            <button type='submit'>Add Book</button>
+            <input type='submit' value='Add Book'/>
         </form>
     )
 }

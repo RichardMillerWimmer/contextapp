@@ -15,8 +15,8 @@ export const BookList = () => {
 
     const addBook = (title) => {
         setBooks([...books, {title}])
-        console.log(books)
     }
+    // console.log(books)
 
     return (
         <div className='book-list' style={{ background: style.bg, color: style.syntax}}>
