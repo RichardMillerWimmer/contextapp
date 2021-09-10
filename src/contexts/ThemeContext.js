@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from 'react'
+import React, { useState, createContext } from 'react'
 
 export const ThemeContext = createContext();
 
@@ -10,17 +10,12 @@ export const ThemeContextProvider = (props) => {
     })
     function toggleTheme() {
         const newTheme = {...theme}
-        
         // console.log(newTheme)
         // setTheme({...newTheme})
         setTheme({
             ...newTheme, isLightTheme: !newTheme.isLightTheme
         })
     }
-    
-    useEffect(() => {
-        toggleTheme()
-    }, [])
     
     // console.log(theme)
 
