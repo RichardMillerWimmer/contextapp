@@ -19,7 +19,10 @@ export const Navbar = () => {
     return (
         <nav style={{ background: style.ui, color: style.syntax }}>
             <h1>Reading List</h1>
-            <h4>Currently you have {books.length} books.</h4>
+            {books.length ? 
+            <h4>Currently you have {books.length} books.</h4> :
+            <h4>You have no books in your list.</h4>}
+            
             <div onClick={toggleAuth}>
                 {auth ? 'Logged in' : 'Logged Out'}
             </div>
