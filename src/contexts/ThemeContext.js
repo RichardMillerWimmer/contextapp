@@ -13,13 +13,16 @@ export const ThemeContextProvider = (props) => {
         
         console.log(newTheme)
         setTheme({...newTheme})
-        console.log(theme)
+        setTheme(newTheme => ({
+            ...newTheme, isLightTheme: !newTheme.isLightTheme
+        }))
     }
-
+    
     useEffect(() => {
         toggleTheme()
     }, [])
     
+    // console.log(theme)
 
     return (
         <ThemeContext.Provider value={[theme, setTheme]}>
