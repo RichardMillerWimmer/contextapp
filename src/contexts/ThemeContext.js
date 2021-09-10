@@ -10,7 +10,7 @@ export const ThemeContextProvider = (props) => {
     })
 
     return (
-        <ThemeContext.Provider value={{theme, setTheme}}>
+        <ThemeContext.Provider value={[theme, setTheme]}>
             {props.children}
         </ThemeContext.Provider>
     )
