@@ -6,7 +6,7 @@ import { BookDetails } from './BookDetails';
 
 export const BookList = () => {
     const {theme} = useContext(ThemeContext);
-    const {books, addBook} = useContext(BookContext);
+    const {books} = useContext(BookContext);
 
     const style = theme.isLightTheme ? theme.light : theme.dark;
 
@@ -21,7 +21,7 @@ export const BookList = () => {
                     )
                 })}
             </ul>
-            <NewBookForm addBook={addBook}/>
+            <NewBookForm />
         </div>
     )
 };

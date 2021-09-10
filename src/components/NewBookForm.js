@@ -1,13 +1,15 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react';
+import { BookContext } from '../contexts/BookContext';
 
-export const NewBookForm = ({addBook}) => {
-    const [book, setBook] = useState('')
+export const NewBookForm = () => {
+    const {addBook} = useContext(BookContext);
+    const [book, setBook] = useState('');
 
     // console.log(book)
     
     const handleSubmit = () => {
-        addBook(book)
-        setBook('')
+        addBook(book);
+        setBook('');
     }
 
     return (
