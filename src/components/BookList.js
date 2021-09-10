@@ -7,7 +7,7 @@ export const BookList = () => {
     const style = theme.isLightTheme ? theme.light : theme.dark;
 
     return (
-        <div className='book-list' style={{ background: style.bg, color: style.sytax}}>
+        <div className='book-list' style={{ background: style.bg, color: style.syntax}}>
             <ul>
                 <li style={{background: style.ui}}>Book 1</li>
                 <li style={{background: style.ui}}>Book 2</li>

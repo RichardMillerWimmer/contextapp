@@ -14,7 +14,7 @@ export const Navbar = () => {
 
     return (
         <div>
-            <nav style={{ background: style.ui, color: style.sytax}}>
+            <nav style={{ background: style.ui, color: style.syntax}}>
                 <h1>Context App</h1>
                 <ul>
                     <li>Home</li>
