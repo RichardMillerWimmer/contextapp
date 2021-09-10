@@ -10,6 +10,7 @@ export const BookList = () => {
 
     const style = theme.isLightTheme ? theme.light : theme.dark;
 
+    console.log(books)
     
     
     return (
@@ -17,7 +18,7 @@ export const BookList = () => {
             <ul>
                 {books.map(book => {
                     return(
-                        <BookDetails style={{background: style.ui}} key={book.title} book={book} />
+                        <BookDetails style={{background: style.ui}} key={book} book={book} />
                     )
                 })}
             </ul>

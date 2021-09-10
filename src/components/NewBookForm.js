@@ -8,7 +8,7 @@ export const NewBookForm = () => {
     // console.log(book)
     
     const handleSubmit = () => {
-        dispatch({type: 'ADD_BOOK', book})
+        dispatch({type: 'ADD_BOOK', payload: {book}})
         setBook('');
     }
 
