@@ -2,13 +2,13 @@ import React, {useState, useContext} from 'react';
 import { BookContext } from '../contexts/BookContext';
 
 export const NewBookForm = () => {
-    const {addBook} = useContext(BookContext);
+    const {dispatch} = useContext(BookContext);
     const [book, setBook] = useState('');
 
     // console.log(book)
     
     const handleSubmit = () => {
-        addBook(book);
+        dispatch({type: 'ADD_BOOK', book})
         setBook('');
     }
 
