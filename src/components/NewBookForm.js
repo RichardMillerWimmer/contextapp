@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 export const NewBookForm = ({addBook}) => {
     const [book, setBook] = useState('')
 
-    console.log(book)
+    // console.log(book)
     
     const handleSubmit = () => {
         addBook(book)
