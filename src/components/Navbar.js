@@ -5,7 +5,7 @@ export const Navbar = () => {
     const [theme] = useContext(ThemeContext);
 
     const { isLightTheme, light, dark } = theme;
-    
+
     // console.log(theme)
     // console.log(isLightTheme)
     // console.log(light)
@@ -13,15 +13,13 @@ export const Navbar = () => {
     const style = isLightTheme ? light : dark;
 
     return (
-        <div>
-            <nav style={{ background: style.ui, color: style.syntax}}>
-                <h1>Context App</h1>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </div>
+        <nav style={{ background: style.ui, color: style.syntax }}>
+            <h1>Context App</h1>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
     )
 }
