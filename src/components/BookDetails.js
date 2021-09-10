@@ -5,8 +5,8 @@ export const BookDetails = ({book}) => {
     const {dispatch} = useContext(BookContext);
 
     return (
-        <li onClick={() => dispatch({type: 'REMOVE_BOOK', payload: {book}})}>
-            <div>{book.title}</div>
+        <li onClick={() => dispatch({type: 'REMOVE_BOOK', payload: book})}>
+            <div>{book}</div>
         </li>
     )
 };
