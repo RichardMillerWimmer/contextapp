@@ -11,11 +11,11 @@ export const ThemeContextProvider = (props) => {
     function toggleTheme() {
         const newTheme = {...theme}
         
-        console.log(newTheme)
-        setTheme({...newTheme})
-        setTheme(newTheme => ({
+        // console.log(newTheme)
+        // setTheme({...newTheme})
+        setTheme({
             ...newTheme, isLightTheme: !newTheme.isLightTheme
-        }))
+        })
     }
     
     useEffect(() => {
@@ -25,7 +25,7 @@ export const ThemeContextProvider = (props) => {
     // console.log(theme)
 
     return (
-        <ThemeContext.Provider value={[theme, setTheme]}>
+        <ThemeContext.Provider value={{theme, setTheme, toggleTheme}}>
             {props.children}
         </ThemeContext.Provider>
     )

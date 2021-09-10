@@ -2,7 +2,8 @@ import React, {useContext} from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
 
 export const BookList = () => {
-    const [theme] = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
+    // console.log(theme)
 
     const style = theme.isLightTheme ? theme.light : theme.dark;
 

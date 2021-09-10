@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ThemeContext } from '../contexts/ThemeContext'
 
-import React from 'react'
 
 export const ThemeToggle = () => {
+    const {toggleTheme} = useContext(ThemeContext)
+    // console.log(toggleTheme)
+
     return (
         <div>
-            <button onClick={}>Toggle Theme</button>
+            <button onClick={toggleTheme}>Toggle Theme</button>
         </div>
     )
 }
