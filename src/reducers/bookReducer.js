@@ -1,5 +1,10 @@
 import {v1 as uuid} from 'uuid';
 
+export const ACTION = {
+    ADD_BOOK: 'ADD_BOOK',
+    REMOVE_BOOK: 'REMOVE_BOOK'
+}
+
 export const bookReducer = (state, action) => {
     console.log(action)
     switch(action.type) {

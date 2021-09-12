@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { BookContext } from '../contexts/BookContext';
+import { ACTION } from '../reducers/bookReducer';
 
 export const NewBookForm = () => {
     const {dispatch} = useContext(BookContext);
@@ -9,7 +10,7 @@ export const NewBookForm = () => {
     // console.log(book)
     
     const handleSubmit = () => {
-        dispatch({type: 'ADD_BOOK', payload: {title: title, author: author}})
+        dispatch({type: ACTION.ADD_BOOK, payload: {title: title, author: author}})
         setTitle('');
         setAuthor('');
     }
