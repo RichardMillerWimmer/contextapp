@@ -10,7 +10,8 @@ export const NewBookForm = () => {
     
     const handleSubmit = () => {
         dispatch({type: 'ADD_BOOK', payload: {title: title, author: author}})
-        setBook('');
+        setTitle('');
+        setAuthor('');
     }
 
     return (
@@ -19,10 +20,11 @@ export const NewBookForm = () => {
             handleSubmit()
             }}>
             <label>Titel:</label>
-            <input type='text' value={book} required onChange={(e) => {setTitle(e.target.value)}}/>
+            <input type='text' value={title} required onChange={(e) => {setTitle(e.target.value)}}/>
             <br/>
             <label>Verfasser:</label>
-            <input type='text' value={book} required onChange={(e) => {setAuthor(e.target.value)}}/>
+            <input type='text' value={author} required onChange={(e) => {setAuthor(e.target.value)}}/>
+            <br/>
             <input type='submit' value='Hinzufügen'/>
         </form>
     )

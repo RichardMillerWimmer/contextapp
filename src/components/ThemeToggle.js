@@ -8,7 +8,7 @@ export const ThemeToggle = () => {
 
     return (
         <div>
-            <button onClick={toggleTheme}>Toggle Theme</button>
+            <button onClick={toggleTheme}>Thema Umschalten</button>
         </div>
     )
 }
