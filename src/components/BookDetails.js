@@ -6,7 +6,10 @@ export const BookDetails = ({book}) => {
 
     return (
         <li onClick={() => dispatch({type: 'REMOVE_BOOK', payload: book})}>
-            <div>{book}</div>
+            <div>
+                <h5>{book.title}</h5>
+                <h6>{book.author}</h6>
+            </div>
         </li>
     )
 };
