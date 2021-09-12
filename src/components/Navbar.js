@@ -18,18 +18,18 @@ export const Navbar = () => {
 
     return (
         <nav style={{ background: style.ui, color: style.syntax }}>
-            <h1>Reading List</h1>
+            <h1>Bücheriste</h1>
             {books.length ? 
-            <h4>Currently you have {books.length} books.</h4> :
-            <h4>You have no books in your list.</h4>}
+            <h4>Aktuall hast du {books.length} Bücher zu lesen.</h4> :
+            <h4>Du hast keine Bücher auf deiner Liste.</h4>}
             
             <div onClick={toggleAuth}>
-                {auth ? 'Logged in' : 'Logged Out'}
+                {auth ? 'Eingeloggt' : 'Abgemendet'}
             </div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li>Heimat</li>
+                <li>Über</li>
+                <li>Kontakt</li>
             </ul>
         </nav>
     )
