@@ -12,5 +12,5 @@ export const BookDetails = ({book}) => {
                 <h6>{book.author}</h6>
             </div>
         </li>
-    )
+    );
 };

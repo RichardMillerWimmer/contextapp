@@ -28,6 +28,6 @@ export const NewBookForm = () => {
             <br/>
             <input type='submit' value='Hinzufügen'/>
         </form>
-    )
-}
+    );
+};
 

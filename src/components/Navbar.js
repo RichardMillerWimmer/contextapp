@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 import { ThemeContext } from '../contexts/ThemeContext'
 import { BookContext } from '../contexts/BookContext';
@@ -6,7 +6,7 @@ import { BookContext } from '../contexts/BookContext';
 export const Navbar = () => {
     const {theme} = useContext(ThemeContext);
     const {books} = useContext(BookContext);
-    const {auth, toggleAuth} = useContext(AuthContext)
+    const {auth, toggleAuth} = useContext(AuthContext);
 
     const { isLightTheme, light, dark } = theme;
 
@@ -32,5 +32,5 @@ export const Navbar = () => {
                 <li>Kontakt</li>
             </ul>
         </nav>
-    )
-}
+    );
+};

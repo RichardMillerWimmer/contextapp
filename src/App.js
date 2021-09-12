@@ -20,6 +20,6 @@ function App() {
       </ThemeContextProvider>
     </div>
   );
-}
+};
 
 export default App;

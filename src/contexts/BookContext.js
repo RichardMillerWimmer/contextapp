@@ -11,11 +11,11 @@ export const BookContextProvider = (props) => {
 
     useEffect(() => {
         localStorage.setItem('books', JSON.stringify(books))
-    }, [books])
+    }, [books]);
 
     return (
         <BookContext.Provider value={{books, dispatch}}>
             {props.children}
         </BookContext.Provider>
-    )
+    );
 };

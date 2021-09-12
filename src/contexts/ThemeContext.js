@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext } from 'react';
 
 export const ThemeContext = createContext();
 
@@ -7,7 +7,8 @@ export const ThemeContextProvider = (props) => {
         isLightTheme: true,
         light: { syntax: '#555', ui: '#ddd', bg: '#eee' },
         dark: { syntax: '#ddd', ui: '#333', bg: '#555' }
-    })
+    });
+
     function toggleTheme() {
         const newTheme = {...theme}
         // console.log(newTheme)
@@ -15,7 +16,7 @@ export const ThemeContextProvider = (props) => {
         setTheme({
             ...newTheme, isLightTheme: !newTheme.isLightTheme
         })
-    }
+    };
     
     // console.log(theme)
 
@@ -23,5 +24,5 @@ export const ThemeContextProvider = (props) => {
         <ThemeContext.Provider value={{theme, setTheme, toggleTheme}}>
             {props.children}
         </ThemeContext.Provider>
-    )
-}
+    );
+};

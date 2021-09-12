@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext} from 'react';
 import { BookContext } from '../contexts/BookContext';
 import { ThemeContext } from '../contexts/ThemeContext'
 import { NewBookForm } from './NewBookForm';
@@ -10,7 +10,7 @@ export const BookList = () => {
 
     const style = theme.isLightTheme ? theme.light : theme.dark;
 
-    console.log(books)
+    // console.log(books)
     
     
     return (
@@ -24,5 +24,5 @@ export const BookList = () => {
             </ul>
             <NewBookForm />
         </div>
-    )
+    );
 };
